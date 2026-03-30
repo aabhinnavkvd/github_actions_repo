@@ -9,39 +9,9 @@ jobs:
   job1:
     runs-on: ubuntu-latest
     steps:
-      - name: Run a one-line script
-        run: echo This is job 1!
-      
-  
-  job2:
-    runs-on: ubuntu-latest
-    needs: job1
-    steps:
-      - name: Run a one-line script
-        run: echo This is job 2!
-      - name: Run a multi-line script
-        run: |
-          sudo apt-get update
-          sudo apt-get install -y apache2
-
-  job3:
-    runs-on: ubuntu-latest
-    needs: job1
-    steps:
-      - name: Run a one-line script
-        run: echo This is job 3!
-      - name: Run a multi-line script
-        run: |
-          sudo apt-get update
-          sudo apt-get install -y nginx
-
-  job4:
-    runs-on: ubuntu-latest
-    needs: [ job2, job3 ]
-    steps:
-      - name: Run a one-line script
-        run: echo This is job 4!
-      - name: Run a multi-line script
-        run: |
-          echo "Job 4 is running after job 2 and job 3 have completed."
-    
+      - name: Before Checkout
+        run: ls -la
+      - name: Code Checkout
+        uses: actions/checkout@v6.0.0
+      - name: list files
+        run: ls -la
