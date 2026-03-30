@@ -9,9 +9,10 @@ jobs:
   job1:
     runs-on: ubuntu-latest
     steps:
-      - name: Before Checkout
-        run: ls -la
       - name: Code Checkout
         uses: actions/checkout@v6.0.0
-      - name: list files
-        run: ls -la
+      - name: Setup Python
+        uses: actions/setup-python@v6
+        with:
+          python-version: '3.13' 
+      - run: pip install -r requirements.txt
