@@ -14,4 +14,14 @@ jobs:
       - name: Run a multi-line script
         run: |
           sudo apt-get update
-          sudo apt-get install -y python3-pip
+          sudo apt-get install -y nginx
+  
+  job2:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Run a one-line script
+        run: echo This is job 2!
+      - name: Run a multi-line script
+        run: |
+          sudo apt-get update
+          sudo apt-get install -y apache2
