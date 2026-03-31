@@ -57,10 +57,15 @@ jobs:
   sonarqube:
     runs-on: ubuntu-latest
     steps:
-      - uses: actions/checkout@v6.0.0
-        with:
-          fetch-depth: 0
+      - name: Checkout code
+        uses: actions/checkout@v6.0.0
+
       - name: SonarQube Scan
         uses: SonarSource/sonarqube-scan-action@a31c9398be7ace6bbfaf30c0bd5d415f843d45e9
+        env:
+          SONAR_TOKEN: ${{ secrets.SONAR_TOKEN }}
+          
+      - name: SonarQube Quality Gate
+        uses: SonarSource/sonarqube-quality-gate-action@cf038b0e0cdecfa9e56c198bbb7d21d751d62c3b
         env:
           SONAR_TOKEN: ${{ secrets.SONAR_TOKEN }}
