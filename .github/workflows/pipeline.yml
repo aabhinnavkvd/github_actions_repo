@@ -31,6 +31,7 @@ jobs:
   
   Codeql-analysis:
     runs-on: ubuntu-latest
+    needs: code-checkout-and-setup
     permissions:
       actions: read
       contents: read
