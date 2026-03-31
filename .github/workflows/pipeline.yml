@@ -107,6 +107,7 @@ jobs:
           file: ./Dockerfile
           tags: my-flask-app:${{ steps.vars.outputs.IMAGE_TAGS }}
           push: false
+          load: true
 
       - name: Save Docker image
         run: docker save my-flask-app:${{ steps.vars.outputs.IMAGE_TAGS }} -o my-flask-app.tar
