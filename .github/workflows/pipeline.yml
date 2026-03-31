@@ -61,6 +61,6 @@ jobs:
         with:
           fetch-depth: 0
       - name: SonarQube Scan
-        uses: SonarSource/sonarqube-scan-action@4bd40bf
+        uses: SonarSource/sonarqube-scan-action@a31c939
         env:
           SONAR_TOKEN: ${{ secrets.SONAR_TOKEN }}
