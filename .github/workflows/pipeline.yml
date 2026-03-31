@@ -21,7 +21,7 @@ jobs:
       - name: Run Tests
         run: |
           mkdir -p test-results/
-          pytest --cov=. --cov-report=xml
+          pytest --cov=. --cov-report=xml --junitxml=test-results/test-results.xml
 
       - name: Upload Test artifacts
         uses: actions/upload-artifact@v7
