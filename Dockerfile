@@ -15,3 +15,4 @@ EXPOSE 8000
 
 # Run with Gunicorn
 CMD ["gunicorn", "--bind", "0.0.0.0:8000", "app:app"]
+
