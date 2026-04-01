@@ -115,5 +115,3 @@ jobs:
           tags: ${{ secrets.DOCKER_USERNAME }}/my-flask-app:${{ steps.vars.outputs.IMAGE_TAGS }}
           push: True
           load: true
-
-  
