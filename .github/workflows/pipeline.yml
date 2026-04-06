@@ -5,6 +5,10 @@ on:
     branches: [ "main" ]
   workflow_dispatch:
 
+permissions:
+  actions: read
+  security-events: write
+
 jobs:
   ci-pipeline-job:
     uses: aabhinnavkvd/reusable_pipelines/.github/workflows/ci-pipeline.yml@main
