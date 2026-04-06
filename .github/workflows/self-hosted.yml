@@ -7,13 +7,13 @@ on:
 
 jobs:
   job1:
-    runs-on: [self-hosted, npm]
+    runs-on: [self-hosted, python]
     steps:
       - name: Python Version
         run: python3 --version
 
   job2:
-    runs-on: [self-hosted, python]
+    runs-on: [self-hosted, npm]
     steps:
      - name: npm Version
        run: npm --version
