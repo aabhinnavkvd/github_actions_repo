@@ -9,8 +9,8 @@ jobs:
   job1:
     runs-on: [self-hosted, python]
     steps:
-      - name: Python3 Version
-        run: python --version
+      - name: Python Version
+        run: python3 --version
 
   job2:
     runs-on: [self-hosted, npm]
