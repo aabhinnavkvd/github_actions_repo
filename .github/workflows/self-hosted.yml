@@ -9,7 +9,7 @@ jobs:
   job1:
     runs-on: [self-hosted, python]
     steps:
-      - name: Python Version
+      - name: Python3 Version
         run: python --version
 
   job2:
