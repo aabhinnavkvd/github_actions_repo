@@ -14,6 +14,9 @@ permissions:
 jobs:
   ci-pipeline-job:
     uses: aabhinnavkvd/reusable_pipelines/.github/workflows/ci-pipeline.yml@main
+    with:
+      Codeql-analysis: "true"
+      sonarqube: "true"
     secrets:
       SONAR_TOKEN: ${{ secrets.SONAR_TOKEN }}
       DOCKER_USERNAME: ${{ secrets.DOCKER_USERNAME }}
