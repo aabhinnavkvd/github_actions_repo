@@ -16,7 +16,8 @@ jobs:
           echo "CPU Architecture: $(uname -m)"
           echo "Available Memory: $(free -h)"
           echo "Runner Name: ${{ runner.name }}"
-          python --version
+          sudo apt-get update && sudo apt-get install -y python3
+          python3 --version
           sleep 30
 
   job2:
@@ -29,5 +30,7 @@ jobs:
          echo "CPU Architecture: $(uname -m)"
          echo "Available Memory: $(free -h)"
          echo "Runner Name: ${{ runner.name }}"
+         sudo apt-get update && sudo apt-get install -y nodejs npm
+         node --version
          npm --version
          sleep 30
