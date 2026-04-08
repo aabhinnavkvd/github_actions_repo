@@ -7,7 +7,7 @@ on:
 
 jobs:
   job1:
-    runs-on: minikube-arc
+    runs-on: github-actions-scaleset-demo
     steps:
       - name: Display system information
         run: |
@@ -16,12 +16,10 @@ jobs:
           echo "CPU Architecture: $(uname -m)"
           echo "Available Memory: $(free -h)"
           echo "Runner Name: ${{ runner.name }}"
-          sudo apt-get update && sudo apt-get install -y python3
-          python3 --version
-          sleep 30
+          sleep 90
 
   job2:
-    runs-on: minikube-arc
+    runs-on: github-actions-scaleset-demo
     steps:
      - name: Display system information
        run: |
@@ -30,7 +28,4 @@ jobs:
          echo "CPU Architecture: $(uname -m)"
          echo "Available Memory: $(free -h)"
          echo "Runner Name: ${{ runner.name }}"
-         sudo apt-get update && sudo apt-get install -y nodejs npm
-         node --version
-         npm --version
-         sleep 30
+         sleep 90
