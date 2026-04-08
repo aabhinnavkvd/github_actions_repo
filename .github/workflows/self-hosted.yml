@@ -15,7 +15,6 @@ jobs:
           echo "Operating System: $(uname -a)"
           echo "CPU Architecture: $(uname -m)"
           echo "Available Memory: $(free -h)"
-          echo "Disk Space: $(df -h)"
           echo "Runner Name: ${{ runner.name }}"
           sleep 30
 
@@ -28,6 +27,5 @@ jobs:
          echo "Operating System: $(uname -a)"
          echo "CPU Architecture: $(uname -m)"
          echo "Available Memory: $(free -h)"
-         echo "Disk Space: $(df -h)"
          echo "Runner Name: ${{ runner.name }}"
          sleep 30
