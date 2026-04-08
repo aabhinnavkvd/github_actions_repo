@@ -7,13 +7,27 @@ on:
 
 jobs:
   job1:
-    runs-on: [self-hosted, python]
+    runs-on: minikube-arc
     steps:
-      - name: Python Version
-        run: python3 --version
+      - name: Display system information
+        run: |
+          echo "Running on a self-hosted runner!"
+          echo "Operating System: $(uname -a)"
+          echo "CPU Architecture: $(uname -m)"
+          echo "Available Memory: $(free -h)"
+          echo "Disk Space: $(df -h)"
+          echo "Runner Name: ${{ runner.name }}"
+          sleep 30
 
   job2:
-    runs-on: [self-hosted, npm]
+    runs-on: minikube-arc
     steps:
-     - name: npm Version
-       run: npm --version
+     - name: Display system information
+       run: |
+         echo "Running on a self-hosted runner!"
+         echo "Operating System: $(uname -a)"
+         echo "CPU Architecture: $(uname -m)"
+         echo "Available Memory: $(free -h)"
+         echo "Disk Space: $(df -h)"
+         echo "Runner Name: ${{ runner.name }}"
+         sleep 30
