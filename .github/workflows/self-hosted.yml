@@ -16,6 +16,7 @@ jobs:
           echo "CPU Architecture: $(uname -m)"
           echo "Available Memory: $(free -h)"
           echo "Runner Name: ${{ runner.name }}"
+          python --version
           sleep 30
 
   job2:
@@ -28,4 +29,5 @@ jobs:
          echo "CPU Architecture: $(uname -m)"
          echo "Available Memory: $(free -h)"
          echo "Runner Name: ${{ runner.name }}"
+         npm --version
          sleep 30
