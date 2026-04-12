@@ -7,7 +7,7 @@ on:
 
 jobs:
   job1:
-    runs-on: arc-k3s
+    runs-on: arc-runner-scaleset
     steps:
       - name: Display system information
         run: |
@@ -19,7 +19,7 @@ jobs:
           sleep 30
 
   job2:
-    runs-on: arc-k3s
+    runs-on: arc-runner-scaleset
     steps:
      - name: Display system information
        run: |
@@ -31,7 +31,7 @@ jobs:
          sleep 30
 
   job3:
-    runs-on: arc-k3s
+    runs-on: arc-runner-scaleset
     steps:
      - name: Display system information
        run: |
@@ -44,7 +44,7 @@ jobs:
 
   job4:
     name: Python Setup
-    runs-on: arc-k3s
+    runs-on: arc-runner-scaleset
     steps:
       - name: Python Setup
         uses: actions/setup-python@v6
