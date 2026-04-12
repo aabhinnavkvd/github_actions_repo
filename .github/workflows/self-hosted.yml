@@ -94,16 +94,7 @@ jobs:
     runs-on: arc-runner-scaleset
     steps:
       - name: Docker Setup
-        uses: docker/setup-buildx-action@v2
-
-      - name: Verify Docker Installation
-        run: |
-          echo "Running on a self-hosted runner!"
-          echo "Operating System: $(uname -a)"
-          echo "CPU Architecture: $(uname -m)"
-          echo "Available Memory: $(free -h)"
-          echo "Runner Name: ${{ runner.name }}"
-          docker version
+        uses: docker/setup-buildx-action@v6
 
   job8:
     runs-on: arc-runner-scaleset
