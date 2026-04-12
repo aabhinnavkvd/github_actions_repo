@@ -32,7 +32,6 @@ jobs:
 
   job3:
     runs-on: arc-k3s
-    needs: [job2]
     steps:
      - name: Display system information
        run: |
@@ -42,6 +41,22 @@ jobs:
          echo "Available Memory: $(free -h)"
          echo "Runner Name: ${{ runner.name }}"
          sleep 30
+
+  job4:
+    name: Python Setup
+    runs-on: arc-k3s
+    steps:
+      - name: Python Setup
+        uses: actions/setup-python@v6
+        with:
+          python-version: '3.13' 
+
+      - name: Install dependencies
+        run: |
+          python -m pip install --upgrade pip
+          pip install requests
+      
+  
   
   # python-job:
   #   runs-on: github-actions-scaleset-demo
