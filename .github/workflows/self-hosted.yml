@@ -7,7 +7,7 @@ on:
 
 jobs:
   job1:
-    runs-on: k3s-arc
+    runs-on: arc-k3s
     steps:
       - name: Display system information
         run: |
@@ -19,7 +19,7 @@ jobs:
           sleep 90
 
   job2:
-    runs-on: k3s-arc
+    runs-on: arc-k3s
     steps:
      - name: Display system information
        run: |
