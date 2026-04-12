@@ -129,6 +129,14 @@ jobs:
           echo "Runner Name: ${{ runner.name }}"
           sleep 30
   
+  job10:
+    runs-on: arc-runner-scaleset
+    needs: job9
+    steps:
+      - name: Display system information
+        run: |
+          echo "Running on a self-hosted runner!"
+          echo "Operating System: $(uname -a)"
   
   # python-job:
   #   runs-on: github-actions-scaleset-demo
