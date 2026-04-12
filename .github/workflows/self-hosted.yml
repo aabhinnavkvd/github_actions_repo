@@ -131,7 +131,7 @@ jobs:
   
   job10:
     runs-on: arc-runner-scaleset
-    needs: job9
+    needs: [job8, job9]
     steps:
       - name: Display system information
         run: |
