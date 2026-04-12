@@ -16,7 +16,7 @@ jobs:
           echo "CPU Architecture: $(uname -m)"
           echo "Available Memory: $(free -h)"
           echo "Runner Name: ${{ runner.name }}"
-          sleep 90
+          sleep 30
 
   job2:
     runs-on: arc-k3s
@@ -28,7 +28,20 @@ jobs:
          echo "CPU Architecture: $(uname -m)"
          echo "Available Memory: $(free -h)"
          echo "Runner Name: ${{ runner.name }}"
-         sleep 90
+         sleep 30
+
+  job3:
+    runs-on: arc-k3s
+    needs: [job2]
+    steps:
+     - name: Display system information
+       run: |
+         echo "Running on a self-hosted runner!"
+         echo "Operating System: $(uname -a)"
+         echo "CPU Architecture: $(uname -m)"
+         echo "Available Memory: $(free -h)"
+         echo "Runner Name: ${{ runner.name }}"
+         sleep 30
   
   # python-job:
   #   runs-on: github-actions-scaleset-demo
