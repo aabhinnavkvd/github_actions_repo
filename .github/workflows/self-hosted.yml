@@ -7,7 +7,7 @@ on:
 
 jobs:
   job1:
-    runs-on: arc-runner-scaleset
+    runs-on: github-actions-scaleset-demo
     steps:
       - name: Display system information
         run: |
@@ -19,7 +19,7 @@ jobs:
           sleep 30
 
   job2:
-    runs-on: arc-runner-scaleset
+    runs-on: github-actions-scaleset-demo
     steps:
      - name: Display system information
        run: |
@@ -31,7 +31,7 @@ jobs:
          sleep 30
 
   job3:
-    runs-on: arc-runner-scaleset
+    runs-on: github-actions-scaleset-demo
     steps:
      - name: Display system information
        run: |
@@ -44,7 +44,7 @@ jobs:
 
   job4:
     name: Python Setup
-    runs-on: arc-runner-scaleset
+    runs-on: github-actions-scaleset-demo
     steps:
       - name: Python Setup
         uses: actions/setup-python@v6
@@ -58,7 +58,7 @@ jobs:
 
   job5:
     name: Node.js Setup
-    runs-on: arc-runner-scaleset
+    runs-on: github-actions-scaleset-demo
     steps:
       - name: Node.js Setup
         uses: actions/setup-node@v6
@@ -71,7 +71,7 @@ jobs:
 
   job6:
     name: Java Setup
-    runs-on: arc-runner-scaleset
+    runs-on: github-actions-scaleset-demo
     steps:
       - name: Java Setup
         uses: actions/setup-java@v3
@@ -91,13 +91,13 @@ jobs:
   job7:
     name: Hello World
     needs: [job4, job5, job6]
-    runs-on: arc-runner-scaleset
+    runs-on: github-actions-scaleset-demo
     steps:
       - name: Display system information
         run: echo "Running on a self-hosted runner!"
 
   job8:
-    runs-on: arc-runner-scaleset
+    runs-on: github-actions-scaleset-demo
     steps:
       - name: Display system information
         run: |
@@ -109,7 +109,7 @@ jobs:
           sleep 30
 
   job9:
-    runs-on: arc-runner-scaleset
+    runs-on: github-actions-scaleset-demo
     steps:
       - name: Display system information
         run: |
@@ -121,7 +121,7 @@ jobs:
           sleep 30
   
   job10:
-    runs-on: arc-runner-scaleset
+    runs-on: github-actions-scaleset-demo
     needs: [job8, job9]
     steps:
       - name: Display system information
