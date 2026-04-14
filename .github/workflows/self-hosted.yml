@@ -7,7 +7,7 @@ on:
 
 jobs:
   job1:
-    runs-on: github-actions-scaleset-demo
+    runs-on: arc-runner-scaleset
     steps:
       - name: Display system information
         run: |
@@ -19,7 +19,7 @@ jobs:
           sleep 30
 
   job2:
-    runs-on: github-actions-scaleset-demo
+    runs-on: arc-runner-scaleset
     steps:
      - name: Display system information
        run: |
@@ -31,7 +31,7 @@ jobs:
          sleep 30
 
   job3:
-    runs-on: github-actions-scaleset-demo
+    runs-on: arc-runner-scaleset
     steps:
      - name: Display system information
        run: |
@@ -44,7 +44,7 @@ jobs:
 
   job4:
     name: Python Setup
-    runs-on: github-actions-scaleset-demo
+    runs-on: arc-runner-scaleset
     steps:
       - name: Python Setup
         uses: actions/setup-python@v6
@@ -58,7 +58,7 @@ jobs:
 
   
   # python-job:
-  #   runs-on: github-actions-scaleset-demo
+  #   runs-on: arc-runner-scaleset
   #   steps:
   #     - name: Set up Python
   #       uses: actions/setup-python@v6
@@ -74,7 +74,7 @@ jobs:
   #         python -c "import requests; print(requests.__version__)"
   
   # nodejs-job:
-  #   runs-on: github-actions-scaleset-demo
+  #   runs-on: arc-runner-scaleset
   #   steps:
   #     - name: Set up Node.js
   #       uses: actions/setup-node@v6
